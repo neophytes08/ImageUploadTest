@@ -1,0 +1,15 @@
+<h1>Images from youpoundit mobile</h1>
+<style type="text/css">
+  img
+  {
+    width: 300px;
+    heigth: 300px;
+  }
+</style>
+<% if @picture.size > 0 %>
+  <% @picture.each do |pics| %>
+    <%= image_tag pics.picture.url %>
+  <% end %>
+<% else %>
+  <h4>No image Available</h4>
+<% end %>
